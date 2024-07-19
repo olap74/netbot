@@ -1,0 +1,15 @@
+[Unit]
+Description=uWSGI Telegram bot
+
+[Service]
+ExecStart=/usr/bin/uwsgi --ini /var/www/example/config-uwsgi.ini --master --logto /var/log/uwsgi/netbot.log
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGKILL
+Type=notify
+StandardError=journal
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
