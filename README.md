@@ -26,7 +26,7 @@ json2html>=1.3.0
 Install [Nginx](https://www.f5.com/go/product/welcome-to-nginx) and [UWSGI](https://github.com/unbit/uwsgi). Also, you can use [Certbot](https://certbot.eff.org/) for hadling SSL certificates
 Then using config files in the `/etc` directory of the repo, configure your Nginx, UWSGI and systemctl services. Copy these files to your server and review its content. 
 
-After it's done, get to the Telegram and call a user named `@BotFather`. This bot allows you to [create a new Telegram bot and get it's Token](https://core.telegram.org/bots/tutorial).
+After it's done, get to the Telegram and call a user named [`@BotFather`](https://t.me/BotFather). This bot allows you to [create a new Telegram bot and get it's Token](https://core.telegram.org/bots/tutorial).
 
 Then place all files from `/var/www/example` directory to the same directory on your server and update value of `TOKEN` variable with your token you got from `@BotFather` and `HOSTNAME` variable with your host name. 
 
