@@ -24,7 +24,8 @@ logger = logging.getLogger(__name__)
 # Config
 TOKEN = "1234567890:ABCDefgHijklmNoPQRSTuVWxyz123456789"
 TELEGRAM_URL = "https://api.telegram.org/bot{token}".format(token=TOKEN)
-WEBHOOK_URL  = "https://your-host-name.tld"
+HOSTNAME = "your-host-name.tld"
+WEBHOOK_URL  = "https://" + HOSTNAME
 
 # To retrieve unique user chat ID and group ID, use @IDBot
 WHITELISTED_USERS = ["132242620"]
@@ -261,7 +262,7 @@ def index():
 
     elif(request.method == "GET"):
         logging.info(request.user_agent)
-        title = "tgbot.sre-practise.net"
+        title = HOSTNAME
         title_large = f'If you have nothing to do, don\'t do it here!'
         return render_template('default.html', title=title, title_large=title_large)
 
